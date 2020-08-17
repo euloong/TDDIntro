@@ -72,14 +72,17 @@ public class LibraryTest {
     @Test
     public void shouldAddBookToCollectionWhenEnteredByUser() throws IOException {
         when(bufferedReader.readLine()).thenReturn("The Hobbit");
+
         library.enterBook();
+
         assertThat(books, hasItems("The Hobbit"));
     }
 
     @Test
-    @Ignore // Remove each @Ignore and implement test
+  //  @Ignore // Remove each @Ignore and implement test
     public void shouldDeleteBookFromCollectionWhenRemovedByUser() throws IOException {
         // Add when/thenReturn here
+        when(bufferedReader.readLine()).thenReturn("The Two Towers");
 
         books.add("The Two Towers");
         library.removeBook();
