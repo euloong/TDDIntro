@@ -56,9 +56,17 @@ public class LibraryTest {
     }
 
     @Test
-    @Ignore // Remove each @Ignore and implement test
+    //@Ignore // Remove each @Ignore and implement test
     public void shouldPrintBothBookTitlesWhenThereAreTwoBooks() throws IOException {
         // implement me
+        String firstTitle = "Clean Code";
+        String secondTitle = "Refactoring";
+        books.add(firstTitle);
+        books.add(secondTitle);
+
+        library.listBooks();
+
+        verify(printStream).println(firstTitle + "\n" + secondTitle + "\n");
     }
 
     @Test
